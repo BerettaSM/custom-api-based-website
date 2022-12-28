@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Custom API Website
+{% endblock %}
+
+{% block content%}
+
+    <form method="POST" action="/" class="d-flex flex-column p-5 m-5">
+
+        {{ form.csrf_token }}
+
+        <button class="carousel-control-prev d-none" type="button">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <h1 class="text-center my-title">Bored API</h1>
+        <!-- -->
+        <div class="input d-flex flex-column align-items-center">
+
+            {{ form.participants.label(class_='fs-1') }}
+
+            {{ form.participants(class_='form-select text-center fs-3 my-5') }}
+
+            <span class="input-description fs-4 text-center">{{ form.participants.description }}</span>
+
+        </div>
+
+        <div class="input d-flex flex-column align-items-center d-none">
+
+            {{ form.type.label(class_='fs-1') }}
+
+            {{ form.type(class_='form-select text-center fs-3 my-5') }}
+
+            <span class="input-description fs-4 text-center">{{ form.type.description }}</span>
+
+        </div>
+
+
+        <div class="input d-flex flex-column align-items-center range-holder p-5 d-none">
+
+            {{ form.min_accessibility.label(class_='fs-5 range-label') }}
+
+            {{ form.min_accessibility(class_='form-range fs-3 my-5 min', value=0, min=0, max=1, step=0.1) }}
+
+            {{ form.max_accessibility(class_='form-range fs-3 my-5 max', value=1, min=0, max=1, step=0.1) }}
+
+            {{ form.max_accessibility.label(class_='fs-5 range-label') }}
+
+            <span class="input-description fs-4 mb-3 text-center">{{ form.min_accessibility.description }}</span>
+
+            <span class="fs-2">
+                <span class="min">0.0</span> - <span class="max">1.0</span>
+            </span>
+
+        </div>
+
+
+        <div class="input d-flex flex-column align-items-center range-holder p-5 d-none">
+
+            {{ form.min_price.label(class_='fs-5 range-label') }}
+
+            {{ form.min_price(class_='form-range fs-3 my-5 min', value=0, min=0, max=1, step=0.1) }}
+
+            {{ form.max_price(class_='form-range fs-3 my-5 max', value=1, min=0, max=1, step=0.1) }}
+
+            {{ form.max_price.label(class_='fs-5 range-label') }}
+
+            <span class="input-description fs-4 mb-3 text-center text-center">{{ form.min_price.description }}</span>
+
+            <span class="fs-2">
+                <span class="min">0.0</span> - <span class="max">1.0</span>
+            </span>
+
+        </div>
+
+        {{ form.submit(class_='input btn btn-light btn-lg pink-glow d-none') }}
+
+    </form>
+
+    <span class="result d-none">
+        {{ result }}
+    </span>
+
+{% endblock %}

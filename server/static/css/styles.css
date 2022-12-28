@@ -1,0 +1,117 @@
+html,
+body
+{
+    height: 100%;
+}
+
+.container-fluid
+{
+    margin: 0 auto;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.my-title
+{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+select#participants
+{
+    width: 6rem;
+}
+
+span.input-description
+{
+    width: 250px;
+}
+
+.range-holder
+{
+    position: relative;
+}
+
+input.input
+{
+    background-color: black;
+    border: 1px solid #e60073;
+}
+
+input[type='range']:nth-child(even)
+{
+    right: 175px;
+}
+
+input[type='range']:nth-child(odd)
+{
+    left: 175px;
+}
+
+input[type='range']
+{
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 300px;
+}
+
+.range-label
+{
+    position: absolute;
+}
+
+.range-label:nth-child(even)
+{
+    left: 250px;
+    top: -25px;
+}
+
+.range-label:nth-child(odd)
+{
+    right: 250px;
+    bottom: -50px;
+}
+
+body{
+    background-image: radial-gradient(circle, black , #e60073 0%, black );
+}
+
+.modal, .modal-dialog, .modal-content, .modal-body
+{
+    background-color: transparent;
+}
+
+.pink-glow
+{
+  color: #fff;
+  -webkit-animation: pink-glow 1s ease-in-out infinite alternate;
+  -moz-animation: pink-glow 1s ease-in-out infinite alternate;
+  animation: pink-glow 1s ease-in-out infinite alternate;
+}
+
+.red-glow
+{
+  color: #fff;
+  -webkit-animation: red-glow 1s ease-in-out infinite alternate;
+  -moz-animation: red-glow 1s ease-in-out infinite alternate;
+  animation: red-glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes pink-glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@-webkit-keyframes red-glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e6002e, 0 0 40px #e6002e, 0 0 50px #e6002e, 0 0 60px #e6002e, 0 0 70px #e6002e;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4d62, 0 0 40px #eb1010, 0 0 50px #eb1010, 0 0 60px #eb1010, 0 0 70px #eb1010, 0 0 80px #eb1010;
+  }
+}
